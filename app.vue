@@ -1,10 +1,13 @@
 <script setup lang="ts">
+const { transitionPosition } = usePageTransition();
 </script>
 <template>
   <div>
-    <p class=" text-red-500 text-xl">test</p>
-    <SvgIconCommunity class="text-red-500" />
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <p>{{ transitionPosition }}</p>
+    <NuxtPage :transition="{
+      name: transitionPosition,
+      mode: 'out-in'
+    }" />
+
   </div>
 </template>
