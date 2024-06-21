@@ -5,6 +5,7 @@ export default withNuxt()
   .override('nuxt/vue/rules', {
     rules: {
       'vue/no-v-html': 'off',
+      "vue/first-attribute-linebreak": "off",
     }
   })
   .override('nuxt/typescript/rules', {
