@@ -12,6 +12,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "nuxt": "^3.12.2",
     "nuxt-svgo": "^4.0.1",
     "vue": "^3.4.29",
