@@ -28,6 +28,13 @@ export default defineNuxtConfig({
       }),
       Icons({}),
     ],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "@/assets/styles/_variables.scss";',
+        },
+      },
+    },
   },
 
   svgo: {

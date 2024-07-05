@@ -1,7 +1,7 @@
 export const useADayTime = () => {
   type DayTime = "day" | "night";
   const dayTime = useState<DayTime>("dayTime", () => "day");
-  let intervalId: number;
+  let intervalId: ReturnType<typeof setInterval>;
 
   const isDayTime = (hour: number): boolean => {
     return hour >= 6 && hour < 18;
