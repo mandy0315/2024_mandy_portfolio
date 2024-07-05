@@ -2,7 +2,7 @@ export const usePageLoad = () => {
   const minLoadingTime = 2000;
   const actualLoadTime = ref(0);
   const progress = useState<number>("progress", () => 0);
-  const isLoading = useState<boolean>("isLoading", () => false);
+  const isLoading = useState<boolean>("isLoading", () => true);
   const startTime = performance.now();
   let intervalId: ReturnType<typeof setInterval>;
 
