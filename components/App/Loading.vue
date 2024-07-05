@@ -26,7 +26,7 @@ defineProps<Props>();
   </Transition>
 
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .loading {
   &-container {
     position: fixed;
