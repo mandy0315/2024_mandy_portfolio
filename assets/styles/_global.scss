@@ -3,13 +3,6 @@ body, html {
   font-family: "Noto Sans TC", sans-serif, "微軟正黑體";
 }
 
-body.page-lock {
-  overflow: hidden;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-}
-
 h1, h2, h3, h4, h5, h6, p {
   letter-spacing: 2px;
   line-height: 2;
@@ -26,12 +19,15 @@ a {
   width: 100%;
 }
 
-.clearfix {
-  clear: both;
-}
-
 .font-en {
   font-family: "Lobster", cursive;
+}
+
+.page-lock {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
 }
 
 .bg-day {
@@ -41,7 +37,6 @@ a {
 .bg-night {
   background: $night;
 }
-
 
 .mobileH-window {
   display: none;
@@ -61,162 +56,6 @@ a {
   }
 }
 
-/* menu */
-.menu-bgw-box {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  width: 100vw;
-  height: 100vh;
-  background-color: $white;
-  opacity: 0.75;
-}
-
-.menu-contant-box {
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 150;
-  width: 25rem;
-  height: 100vh;
-  background-color: $day;
-
-  > div {
-    position: absolute;
-  }
-
-  .menu-top-cloud {
-    background: url('/assets/icons/menu/top-cloud.svg') no-repeat;
-    background-size: contain;
-    width: 6rem;
-    height: 6rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .menu-bottom {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    &-hitballoon{
-      position: absolute;
-      background: url('/assets/icons/menu/hitballoon.svg') no-repeat;
-      background-size: contain;
-      width: 5.8rem;
-      height: 9rem;
-      bottom: 1rem;
-      right: 1rem;
-    }
-    &-cloud{
-      background: url('/assets/icons/menu/bottom-cloud.svg') no-repeat;
-      background-size: contain;
-      width: 9rem;
-      height: 7.5rem;
-    }
-  }
-
-  .menu-text {
-    height: 100%;
-
-    ul {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 2.5rem;
-
-      li {
-        padding-bottom: 1.5rem;
-      }
-      .menu-link {
-        display: block;
-        p {
-          color: $white;
-          line-height: 1.5;
-          &:nth-child(1) {
-            display: inline-block;
-            font-size: $h2;
-            font-weight: normal;
-          }
-          &:nth-child(2) {
-            font-size: $h5;
-            font-weight: bold;
-          }
-        }
-        &-icon {
-          display: inline-block;
-          color: $white;
-          font-size: $h5;
-        }
-        &:hover{
-          p {
-            color: $yellow;
-          }
-          .menu-link-icon {
-            color: $yellow;
-          }
-        }
-      }
-
-      .menu-line {
-        background: url('/assets/icons/menu/line.svg') no-repeat;
-        background-size: contain;
-        width: 12rem;
-        height: 0.5rem;
-      }
-
-      .menu-community {
-        p {
-          font-size: $h5;
-          color: $white;
-          font-weight: bold;
-          padding-bottom: 0.5rem;
-        }
-        a {
-          display: inline-block;
-          padding: 0 0.5rem;
-          svg{
-            color: $white;
-            width: 3rem;
-            height: 3rem;
-          }
-          &:hover{
-            svg {
-              color: $yellow;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-//以contact共用
-.fb-icon, .ig-icon {
-  a {
-    svg {
-      width: 3.8rem;
-      fill: $white;
-      margin-right: 0.8rem;
-      -webkit-transform: translateY(0px);
-      transform: translateY(0px);
-      -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-
-      &:hover {
-        fill: $yellow;
-        -webkit-transform: translateY(-5px);
-        transform: translateY(-5px);
-        -webkit-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-      }
-    }
-  }
-}
-
-/* menu end */
 /* nav */
 .line-dotted {
   border-top: 2px dotted #4D3224;

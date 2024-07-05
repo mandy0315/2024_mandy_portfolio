@@ -6,7 +6,7 @@ interface Props {
 defineProps<Props>();
 </script>
 <template>
-  <Transition name="fade">
+  <Transition name="fade-out">
     <main v-show="isLoading" class="loading-container">
 
       <div class="loading-wrapper">

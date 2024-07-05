@@ -30,5 +30,3 @@ useHead({
     }" />
   </Body>
 </template>
-
-<style lang="scss"></style>
