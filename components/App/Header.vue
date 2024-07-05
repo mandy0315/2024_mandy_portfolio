@@ -4,6 +4,7 @@ const { openMenu } = useMenu();
 </script>
 <template>
   <header class="header-container">
+
     <div class="header-logo">
       <a data-ToHome="home">
         <SvgLogoText />
@@ -40,14 +41,14 @@ const { openMenu } = useMenu();
       padding-top: 1rem;
       background: url('/assets/icons/logo/bg.svg') no-repeat;
       background-size: contain;
-      width: 10rem;
-      height: 4.2rem;
+      width: 11rem;
+      height: 4rem;
 
       svg {
-        width: 80%;
-        height: 80%;
-        z-index: 120;
+        width: 9rem;
+        height: 1.8rem;
       }
+
     }
   }
 
