@@ -21,12 +21,16 @@ useHead({
 </script>
 <template>
   <Body :class="[{ 'page-lock': openMenu }, dayTime === 'day' ? 'bg-day' : 'bg-night']">
-    <AppLoading :progress="progress" :is-loading="isLoading" />
-    <AppHeader />
-    <AppMenu />
-    <NuxtPage :transition="{
-      name: transitionPosition,
-      mode: 'out-in'
-    }" />
+    <!-- <AppLoading :progress="progress" :is-loading="isLoading" /> -->
+    <div>
+      <AppHeader />
+      <AppMenu />
+      <NuxtPage :transition="{
+        name: transitionPosition,
+        mode: 'out-in'
+      }" />
+      <AppArrows />
+
+    </div>
   </Body>
 </template>

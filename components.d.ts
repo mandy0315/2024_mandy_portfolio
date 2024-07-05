@@ -7,7 +7,9 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    IconMaterialSymbolsArrowBackRounded: typeof import('~icons/material-symbols/arrow-back-rounded')['default']
     IconMaterialSymbolsArrowCircleRight: typeof import('~icons/material-symbols/arrow-circle-right')['default']
+    IconMaterialSymbolsArrowForwardRounded: typeof import('~icons/material-symbols/arrow-forward-rounded')['default']
     IIconCommunity: typeof import('~icons/ic/on-community')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
