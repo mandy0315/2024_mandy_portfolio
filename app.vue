@@ -30,7 +30,7 @@ useHead({
         mode: 'out-in'
       }" />
       <AppArrows />
-
+      <AppNavigation />
     </div>
   </Body>
 </template>
