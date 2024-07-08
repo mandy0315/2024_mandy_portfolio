@@ -1,5 +1,5 @@
 export const usePageTransition = () => {
-  const allPages = ["/", "/about", "/skills", "/works", "/contact"];
+  const allPaths = ["/", "/about", "/skills", "/works", "/contact"];
   type Position = "slide-left" | "slide-right";
   const transitionPosition = useState<Position>(
     "transitionPosition",
@@ -7,5 +7,5 @@ export const usePageTransition = () => {
   );
   const updatePageTransition = (position: Position) =>
     (transitionPosition.value = position);
-  return { transitionPosition, allPages, updatePageTransition };
+  return { transitionPosition, allPaths, updatePageTransition };
 };

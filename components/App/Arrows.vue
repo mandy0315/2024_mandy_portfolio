@@ -1,13 +1,13 @@
 <script setup lang="ts">
-const { allPages } = usePageTransition();
+const { allPaths } = usePageTransition();
 const route = useRoute();
-const currentPageIndex = computed(() => allPages.indexOf(route.path));
+const currentPageIndex = computed(() => allPaths.indexOf(route.path));
 
 const goToBackPage = async () => {
-  await navigateTo(allPages[currentPageIndex.value - 1]);
+  await navigateTo(allPaths[currentPageIndex.value - 1]);
 };
 const goToNextPage = async () => {
-  await navigateTo(allPages[currentPageIndex.value + 1]);
+  await navigateTo(allPaths[currentPageIndex.value + 1]);
 };
 </script>
 <template>
@@ -15,7 +15,7 @@ const goToNextPage = async () => {
     <button v-if="currentPageIndex > 0" class="arrow-back" @click="goToBackPage">
       <SvgIconArrow />
     </button>
-    <button v-if="currentPageIndex !== (allPages.length - 1)" class="arrow-next" @click="goToNextPage">
+    <button v-if="currentPageIndex !== (allPaths.length - 1)" class="arrow-next" @click="goToNextPage">
       <SvgIconArrow />
     </button>
   </div>
