@@ -30,6 +30,7 @@ a {
   width: 100%;
 }
 
+/* day/night color */
 .bg-day {
   background: $day;
 }
@@ -37,76 +38,22 @@ a {
 .bg-night {
   background: $night;
 }
+/* end day/night color */
 
-.mobileH-window {
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.8);
-
-  h3 {
-    font-size: $h3;
-    color: $brown;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* tooltip */
+[data-tooltip-group] {
+  [data-tooltip] {
+    display: none;
   }
-}
 
-/* nav */
-.line-dotted {
-  border-top: 2px dotted #4D3224;
-  opacity: 0.5;
-  position: relative;
-  bottom: 15px;
-}
-
-/* nav end */
-/* arrow */
-.arrow-pages-left, .arrow-pages-right {
-  display: inline-block;
-  position: fixed;
-  z-index: 50;
-  top: 50%;
-
-  a {
-    display: block;
-
-    &:hover {
-      .arrow-pages-style {
-        path {
-          fill: $yellow;
-        }
-      }
-    }
-
-    svg {
-      width: 35px;
-      filter: drop-shadow(0px 3px 0px rgba(77, 50, 36, 1));
-
-      path {
-        fill: #fff;
-        stroke: #4d3224;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 2px;
-      }
+  &:hover {
+    [data-tooltip] {
+      display: block;
     }
   }
-
-  &.arrow-pages-right {
-    right: 20px;
-  }
-
-  &.arrow-pages-left {
-    left: 20px;
-  }
 }
+/* end tooltip */
 
-/* arrow end */
 /* home */
 .section {
   overflow: hidden;
