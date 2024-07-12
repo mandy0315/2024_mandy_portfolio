@@ -2,7 +2,6 @@
 const { dayTime } = useADayTime();
 
 
-
 </script>
 <template>
   <main class="container">
@@ -10,12 +9,21 @@ const { dayTime } = useADayTime();
       <div class="home-air-title">
         <SvgHomeTitle />
       </div>
+      <!-- day -->
       <template v-if="dayTime === 'day'">
         <div class="home-air-sun" :class="{ 'active': dayTime === 'day' }">
           <SvgHomeSun />
         </div>
         <HomeMoveingClouds class="home-air-clouds" />
-
+      </template>
+      <!-- night -->
+      <template v-else>
+        <div class="home-air-moon" :class="{ 'active': dayTime === 'night' }">
+          <SvgHomeMoon />
+        </div>
+        <div class="home-wrapper home-air-stars">
+          <SvgHomeStars />
+        </div>
       </template>
 
     </div>
@@ -23,6 +31,15 @@ const { dayTime } = useADayTime();
 </template>
 
 <style lang="scss" scoped>
+.home-wrapper {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 45rem);
+  width: 90rem;
+  height: 100%;
+  margin: 0 auto;
+}
+
 .home-air {
   &-wrapper {
     position: relative;
@@ -31,6 +48,7 @@ const { dayTime } = useADayTime();
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
 
   &-title {
@@ -61,8 +79,37 @@ const { dayTime } = useADayTime();
     }
   }
 
+  &-moon {
+    position: absolute;
+    top: 8rem;
+    right: 8rem;
+    z-index: -2;
+    max-width: 2.6rem;
+    width: 100%;
 
+    svg {
+      width: 100%;
+      height: auto;
+    }
+
+    &.active {
+      animation: light 6s linear infinite;
+    }
+  }
+
+
+  &-stars {
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 100%;
+      height: auto;
+
+    }
+  }
 }
+
 
 @keyframes turn {
   from {
@@ -71,6 +118,20 @@ const { dayTime } = useADayTime();
 
   to {
     transform: rotateZ(-360deg) translate3d(0, 0, 0)
+  }
+}
+
+@keyframes light {
+  0% {
+    filter: drop-shadow(2px 2px 5px rgba(238, 255, 142, 0.893));
+  }
+
+  50% {
+    filter: drop-shadow(2px 2px 20px rgba(255, 236, 65, 0.893));
+  }
+
+  100% {
+    filter: drop-shadow(2px 2px 5px rgba(238, 255, 142, 0.893));
   }
 }
 </style>
